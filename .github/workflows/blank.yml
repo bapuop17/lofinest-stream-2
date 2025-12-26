@@ -16,9 +16,8 @@ jobs:
       - name: Start YouTube Stream
         env:
           STREAM_KEY: ${{ secrets.STREAM_KEY }}
-          # Jab upload khatam ho, to uska MP3 link yahan paste karna
-          # Agar abhi test karna hai to niche wala link use kar lo (Temporary)
-          AUDIO_URL: "https://archive.org/download/StreamBeatsLoFi/Harris%20Heller%20-%20StreamBeats%20-%20Lo-Fi%20-%2001%20White%20Noise.mp3"
+          # Aapka banaya hua Permanent Link yahan laga diya hai:
+          AUDIO_URL: "https://github.com/bapuop17/lofinest-stream-2/releases/download/1.0/Sessions.Star.Guardian.Taliyah.A.Creator-Safe.Collection.Riot.Games.Music.mp3"
         run: |
           ffmpeg -re -stream_loop -1 -i video.mp4 \
           -thread_queue_size 512 -reconnect 1 -reconnect_streamed 1 -reconnect_delay_max 5 \
